@@ -1,0 +1,83 @@
+body {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: #000;
+}
+
+.div1 {
+  background: radial-gradient(#000 60%,#0000 60.5%)
+}
+
+.div2 {
+  background: repeating-conic-gradient(#000 0 5%,#0000 0 10%)
+}
+
+.div3 {
+  background: repeating-conic-gradient(#000 0 2%,#0000 0 4%)
+}
+
+.div4 {
+  background: repeating-conic-gradient(#000 0 1%,#0000 0 2%)
+}
+
+.div5 {
+  background: repeating-conic-gradient(#000 0 0.0001%,#0000 0 0.0002%)
+}
+
+.div6 {
+  background:
+    repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%)
+    60% 60%/3000px 3000px,
+    repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%)
+    40% 40%/3000px 3000px;
+  background-blend-mode: difference;
+}
+
+.div7 {
+  background:
+    repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%)
+    60% 60%/3000px 3000px,
+    repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%)
+    40% 40%/3000px 3000px;
+    background-blend-mode: difference;
+  animation: flickr .2s infinite alternate;
+}
+
+@keyframes flickr{
+  100% {background-position: 50% 0, 60% 50%}
+}
+
+.div8 {
+  background:
+  repeating-radial-gradient(#000 0 0.0001%,#fff 0 0.0002%)
+  60% 60%/3000px 3000px,
+  repeating-conic-gradient(#000 0 0.0001%,#fff 0 0.0002%)
+  40% 40%/3000px 3000px;
+  background-blend-mode: difference;
+}
+
+@keyframes transparence{
+  0% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.div8:hover {
+  animation: transparence 1s 1;
+}
